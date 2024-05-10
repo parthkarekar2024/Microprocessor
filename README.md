@@ -26,8 +26,13 @@ This project is a microprocessor implemented in VHDL. It consists of several com
 
 
 ## Resources
-- **Documentation / ISA **: ![image](https://github.com/peekay123456/Microprocessor/assets/132108727/7885e0e3-1955-4abc-861d-4921814e457d), ![image](https://github.com/peekay123456/Microprocessor/assets/132108727/91a95cfd-b01b-4c38-aca4-187b7a165b5a),
-  ![image](https://github.com/peekay123456/Microprocessor/assets/132108727/57defc2c-77ac-4f78-a71e-e3994fe1fe3b) 
+- **Documentation / ISA **:
+-  ![image](https://github.com/peekay123456/Microprocessor/assets/132108727/7885e0e3-1955-4abc-861d-4921814e457d)
+-  ![image](https://github.com/peekay123456/Microprocessor/assets/132108727/91a95cfd-b01b-4c38-aca4-187b7a165b5a)
+-  ![image](https://github.com/peekay123456/Microprocessor/assets/132108727/57defc2c-77ac-4f78-a71e-e3994fe1fe3b)
+-  ![image](https://github.com/peekay123456/Microprocessor/assets/132108727/1806564b-2bd5-4432-bfec-ff3a9dbba8e5)
+  
+
 
 
 
