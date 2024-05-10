@@ -1,0 +1,1346 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xDF6BF4EC4890B1FB",
+      "device": "xc7z010clg400-1",
+      "gen_directory": "../../../../Final_Project.gen/sources_1/bd/ASIP",
+      "name": "ASIP",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clock_div_0": "",
+      "clock_div_baud_0": "",
+      "debouncer_0": "",
+      "regs_0": "",
+      "framebuffer_0": "",
+      "vga_ctrl_0": "",
+      "pixel_pusher_0": "",
+      "instruction_ram_0": "",
+      "uart_0": "",
+      "ram_0": "",
+      "int_to_ascii_0": "",
+      "PmodOLEDCtrl_0": "",
+      "my_alu_0": "",
+      "controls_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "sw_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "ASIP_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "btn_0": {
+        "direction": "I"
+      },
+      "vga_hs": {
+        "direction": "O"
+      },
+      "vga_vs": {
+        "direction": "O"
+      },
+      "vga_r": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "vga_b": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "vga_g": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "TXD": {
+        "direction": "I"
+      },
+      "RXD": {
+        "direction": "O"
+      },
+      "CS": {
+        "direction": "O"
+      },
+      "SDIN": {
+        "direction": "O"
+      },
+      "SCLK": {
+        "direction": "O"
+      },
+      "DC": {
+        "direction": "O"
+      },
+      "RES": {
+        "direction": "O"
+      },
+      "VBAT": {
+        "direction": "O"
+      },
+      "VDD": {
+        "direction": "O"
+      },
+      "sw_0": {
+        "direction": "I"
+      },
+      "CTS": {
+        "direction": "O"
+      },
+      "RTS": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clock_div_0": {
+        "vlnv": "xilinx.com:module_ref:clock_div:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_clock_div_0_0",
+        "xci_path": "ip\\ASIP_clock_div_0_0\\ASIP_clock_div_0_0.xci",
+        "inst_hier_path": "clock_div_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_div",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "O"
+          }
+        }
+      },
+      "clock_div_baud_0": {
+        "vlnv": "xilinx.com:module_ref:clock_div_baud:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_clock_div_baud_0_0",
+        "xci_path": "ip\\ASIP_clock_div_baud_0_0\\ASIP_clock_div_baud_0_0.xci",
+        "inst_hier_path": "clock_div_baud_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_div_baud",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "O"
+          }
+        }
+      },
+      "debouncer_0": {
+        "vlnv": "xilinx.com:module_ref:debouncer:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_debouncer_0_0",
+        "xci_path": "ip\\ASIP_debouncer_0_0\\ASIP_debouncer_0_0.xci",
+        "inst_hier_path": "debouncer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "debouncer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "btn": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "dbnc": {
+            "direction": "O"
+          }
+        }
+      },
+      "regs_0": {
+        "vlnv": "xilinx.com:module_ref:regs:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_regs_0_0",
+        "xci_path": "ip\\ASIP_regs_0_0\\ASIP_regs_0_0.xci",
+        "inst_hier_path": "regs_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "regs",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "id1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "id2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "wr_en1": {
+            "direction": "I"
+          },
+          "wr_en2": {
+            "direction": "I"
+          },
+          "din1": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "din2": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "dout1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dout2": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "regsix": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "framebuffer_0": {
+        "vlnv": "xilinx.com:module_ref:framebuffer:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_framebuffer_0_0",
+        "xci_path": "ip\\ASIP_framebuffer_0_0\\ASIP_framebuffer_0_0.xci",
+        "inst_hier_path": "framebuffer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "framebuffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk1": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en1": {
+            "direction": "I"
+          },
+          "en2": {
+            "direction": "I"
+          },
+          "ld": {
+            "direction": "I"
+          },
+          "addr1": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "addr2": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "wr_en1": {
+            "direction": "I"
+          },
+          "din1": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "dout1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dout2": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "vga_ctrl_0": {
+        "vlnv": "xilinx.com:module_ref:vga_ctrl:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_vga_ctrl_0_0",
+        "xci_path": "ip\\ASIP_vga_ctrl_0_0\\ASIP_vga_ctrl_0_0.xci",
+        "inst_hier_path": "vga_ctrl_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vga_ctrl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "vid": {
+            "direction": "O"
+          },
+          "hs": {
+            "direction": "O"
+          },
+          "vs": {
+            "direction": "O"
+          },
+          "hcount": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "vcount": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "pixel_pusher_0": {
+        "vlnv": "xilinx.com:module_ref:pixel_pusher:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_pixel_pusher_0_0",
+        "xci_path": "ip\\ASIP_pixel_pusher_0_0\\ASIP_pixel_pusher_0_0.xci",
+        "inst_hier_path": "pixel_pusher_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pixel_pusher",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "VS": {
+            "direction": "I"
+          },
+          "pixel": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "hcount": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "vid": {
+            "direction": "I"
+          },
+          "R": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "B": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "G": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "instruction_ram_0": {
+        "vlnv": "xilinx.com:module_ref:instruction_ram:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_instruction_ram_0_0",
+        "xci_path": "ip\\ASIP_instruction_ram_0_0\\ASIP_instruction_ram_0_0.xci",
+        "inst_hier_path": "instruction_ram_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "instruction_ram",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "address": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "uart_0": {
+        "vlnv": "xilinx.com:module_ref:uart:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_uart_0_0",
+        "xci_path": "ip\\ASIP_uart_0_0\\ASIP_uart_0_0.xci",
+        "inst_hier_path": "uart_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "send": {
+            "direction": "I"
+          },
+          "rx": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "charSend": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "ready": {
+            "direction": "O"
+          },
+          "tx": {
+            "direction": "O"
+          },
+          "newChar": {
+            "direction": "O"
+          },
+          "charRec": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "ram_0": {
+        "vlnv": "xilinx.com:module_ref:ram:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_ram_0_0",
+        "xci_path": "ip\\ASIP_ram_0_0\\ASIP_ram_0_0.xci",
+        "inst_hier_path": "ram_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ram",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "wr": {
+            "direction": "I"
+          },
+          "address": {
+            "direction": "I",
+            "left": "14",
+            "right": "0"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "ram_ready": {
+            "direction": "O"
+          }
+        }
+      },
+      "int_to_ascii_0": {
+        "vlnv": "xilinx.com:module_ref:int_to_ascii:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_int_to_ascii_0_0",
+        "xci_path": "ip\\ASIP_int_to_ascii_0_0\\ASIP_int_to_ascii_0_0.xci",
+        "inst_hier_path": "int_to_ascii_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "int_to_ascii",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "number": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "tenthou": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "thou": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "hund": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ten": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "one": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "PmodOLEDCtrl_0": {
+        "vlnv": "xilinx.com:module_ref:PmodOLEDCtrl:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_PmodOLEDCtrl_0_1",
+        "xci_path": "ip\\ASIP_PmodOLEDCtrl_0_1\\ASIP_PmodOLEDCtrl_0_1.xci",
+        "inst_hier_path": "PmodOLEDCtrl_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PmodOLEDCtrl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RST",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "RST": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "CS": {
+            "direction": "O"
+          },
+          "SDIN": {
+            "direction": "O"
+          },
+          "SCLK": {
+            "direction": "O"
+          },
+          "DC": {
+            "direction": "O"
+          },
+          "RES": {
+            "direction": "O"
+          },
+          "VBAT": {
+            "direction": "O"
+          },
+          "VDD": {
+            "direction": "O"
+          },
+          "tenthousand": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "thousand": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "hundred": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "tens": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "ones": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "my_alu_0": {
+        "vlnv": "xilinx.com:module_ref:my_alu:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_my_alu_0_0",
+        "xci_path": "ip\\ASIP_my_alu_0_0\\ASIP_my_alu_0_0.xci",
+        "inst_hier_path": "my_alu_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "my_alu",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "opcode": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "A": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "S": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          }
+        }
+      },
+      "controls_0": {
+        "vlnv": "xilinx.com:module_ref:controls:1.0",
+        "ip_revision": "1",
+        "xci_name": "ASIP_controls_0_0",
+        "xci_path": "ip\\ASIP_controls_0_0\\ASIP_controls_0_0.xci",
+        "inst_hier_path": "controls_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controls",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "ASIP_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "rID1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rID2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "wr_enR1": {
+            "direction": "O"
+          },
+          "wr_enR2": {
+            "direction": "O"
+          },
+          "regrD1": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "regrD2": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "regwD1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "regwD2": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "fbRST": {
+            "direction": "O"
+          },
+          "fbAddr1": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "fbDin1": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "fbDout1": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "fbWr_en": {
+            "direction": "O"
+          },
+          "irAddr": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "irWord": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dAddr": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          },
+          "d_wr_en": {
+            "direction": "O"
+          },
+          "dOut": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "dIn": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "aluA": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "aluB": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "aluOp": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "aluResult": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ready": {
+            "direction": "I"
+          },
+          "newChar": {
+            "direction": "I"
+          },
+          "send": {
+            "direction": "O"
+          },
+          "charRec": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "charSend": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "PmodOLEDCtrl_0_CS": {
+        "ports": [
+          "PmodOLEDCtrl_0/CS",
+          "CS"
+        ]
+      },
+      "PmodOLEDCtrl_0_DC": {
+        "ports": [
+          "PmodOLEDCtrl_0/DC",
+          "DC"
+        ]
+      },
+      "PmodOLEDCtrl_0_RES": {
+        "ports": [
+          "PmodOLEDCtrl_0/RES",
+          "RES"
+        ]
+      },
+      "PmodOLEDCtrl_0_SCLK": {
+        "ports": [
+          "PmodOLEDCtrl_0/SCLK",
+          "SCLK"
+        ]
+      },
+      "PmodOLEDCtrl_0_SDIN": {
+        "ports": [
+          "PmodOLEDCtrl_0/SDIN",
+          "SDIN"
+        ]
+      },
+      "PmodOLEDCtrl_0_VBAT": {
+        "ports": [
+          "PmodOLEDCtrl_0/VBAT",
+          "VBAT"
+        ]
+      },
+      "PmodOLEDCtrl_0_VDD": {
+        "ports": [
+          "PmodOLEDCtrl_0/VDD",
+          "VDD"
+        ]
+      },
+      "btn_0_1": {
+        "ports": [
+          "btn_0",
+          "debouncer_0/btn"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "clock_div_baud_0/clk",
+          "clock_div_0/clk",
+          "debouncer_0/clk",
+          "regs_0/clk",
+          "framebuffer_0/clk1",
+          "vga_ctrl_0/clk",
+          "pixel_pusher_0/clk",
+          "instruction_ram_0/clk",
+          "ram_0/clk",
+          "my_alu_0/clk",
+          "controls_0/clk",
+          "uart_0/clk",
+          "PmodOLEDCtrl_0/CLK"
+        ]
+      },
+      "clock_div_0_en": {
+        "ports": [
+          "clock_div_0/en",
+          "framebuffer_0/en2",
+          "vga_ctrl_0/en",
+          "pixel_pusher_0/en"
+        ]
+      },
+      "clock_div_baud_0_en": {
+        "ports": [
+          "clock_div_baud_0/en",
+          "regs_0/en",
+          "framebuffer_0/en1",
+          "my_alu_0/en",
+          "controls_0/en",
+          "uart_0/en"
+        ]
+      },
+      "controls_0_aluA": {
+        "ports": [
+          "controls_0/aluA",
+          "my_alu_0/A"
+        ]
+      },
+      "controls_0_aluB": {
+        "ports": [
+          "controls_0/aluB",
+          "my_alu_0/B"
+        ]
+      },
+      "controls_0_aluOp": {
+        "ports": [
+          "controls_0/aluOp",
+          "my_alu_0/opcode"
+        ]
+      },
+      "controls_0_charSend": {
+        "ports": [
+          "controls_0/charSend",
+          "uart_0/charSend"
+        ]
+      },
+      "controls_0_dAddr": {
+        "ports": [
+          "controls_0/dAddr",
+          "ram_0/address"
+        ]
+      },
+      "controls_0_dOut": {
+        "ports": [
+          "controls_0/dOut",
+          "ram_0/data_in"
+        ]
+      },
+      "controls_0_d_wr_en": {
+        "ports": [
+          "controls_0/d_wr_en",
+          "ram_0/wr"
+        ]
+      },
+      "controls_0_fbAddr1": {
+        "ports": [
+          "controls_0/fbAddr1",
+          "framebuffer_0/addr1"
+        ]
+      },
+      "controls_0_fbDout1": {
+        "ports": [
+          "controls_0/fbDout1",
+          "framebuffer_0/din1"
+        ]
+      },
+      "controls_0_fbRST": {
+        "ports": [
+          "controls_0/fbRST",
+          "framebuffer_0/ld"
+        ]
+      },
+      "controls_0_fbWr_en": {
+        "ports": [
+          "controls_0/fbWr_en",
+          "framebuffer_0/wr_en1"
+        ]
+      },
+      "controls_0_irAddr": {
+        "ports": [
+          "controls_0/irAddr",
+          "instruction_ram_0/address"
+        ]
+      },
+      "controls_0_rID1": {
+        "ports": [
+          "controls_0/rID1",
+          "regs_0/id1"
+        ]
+      },
+      "controls_0_rID2": {
+        "ports": [
+          "controls_0/rID2",
+          "regs_0/id2"
+        ]
+      },
+      "controls_0_regwD1": {
+        "ports": [
+          "controls_0/regwD1",
+          "regs_0/din1"
+        ]
+      },
+      "controls_0_regwD2": {
+        "ports": [
+          "controls_0/regwD2",
+          "regs_0/din2"
+        ]
+      },
+      "controls_0_send": {
+        "ports": [
+          "controls_0/send",
+          "uart_0/send"
+        ]
+      },
+      "controls_0_wr_enR1": {
+        "ports": [
+          "controls_0/wr_enR1",
+          "regs_0/wr_en1"
+        ]
+      },
+      "controls_0_wr_enR2": {
+        "ports": [
+          "controls_0/wr_enR2",
+          "regs_0/wr_en2"
+        ]
+      },
+      "debouncer_0_dbnc": {
+        "ports": [
+          "debouncer_0/dbnc",
+          "regs_0/rst",
+          "controls_0/rst",
+          "uart_0/rst"
+        ]
+      },
+      "framebuffer_0_dout1": {
+        "ports": [
+          "framebuffer_0/dout1",
+          "controls_0/fbDin1"
+        ]
+      },
+      "framebuffer_0_dout2": {
+        "ports": [
+          "framebuffer_0/dout2",
+          "pixel_pusher_0/pixel"
+        ]
+      },
+      "instruction_ram_0_data_out": {
+        "ports": [
+          "instruction_ram_0/data_out",
+          "controls_0/irWord"
+        ]
+      },
+      "int_to_ascii_0_hund": {
+        "ports": [
+          "int_to_ascii_0/hund",
+          "PmodOLEDCtrl_0/hundred"
+        ]
+      },
+      "int_to_ascii_0_one": {
+        "ports": [
+          "int_to_ascii_0/one",
+          "PmodOLEDCtrl_0/ones"
+        ]
+      },
+      "int_to_ascii_0_ten": {
+        "ports": [
+          "int_to_ascii_0/ten",
+          "PmodOLEDCtrl_0/tens"
+        ]
+      },
+      "int_to_ascii_0_tenthou": {
+        "ports": [
+          "int_to_ascii_0/tenthou",
+          "PmodOLEDCtrl_0/tenthousand"
+        ]
+      },
+      "int_to_ascii_0_thou": {
+        "ports": [
+          "int_to_ascii_0/thou",
+          "PmodOLEDCtrl_0/thousand"
+        ]
+      },
+      "my_alu_0_S": {
+        "ports": [
+          "my_alu_0/S",
+          "controls_0/aluResult"
+        ]
+      },
+      "pixel_pusher_0_B": {
+        "ports": [
+          "pixel_pusher_0/B",
+          "vga_b"
+        ]
+      },
+      "pixel_pusher_0_G": {
+        "ports": [
+          "pixel_pusher_0/G",
+          "vga_g"
+        ]
+      },
+      "pixel_pusher_0_R": {
+        "ports": [
+          "pixel_pusher_0/R",
+          "vga_r"
+        ]
+      },
+      "pixel_pusher_0_addr": {
+        "ports": [
+          "pixel_pusher_0/addr",
+          "framebuffer_0/addr2"
+        ]
+      },
+      "ram_0_data_out": {
+        "ports": [
+          "ram_0/data_out",
+          "controls_0/dIn"
+        ]
+      },
+      "regs_0_dout1": {
+        "ports": [
+          "regs_0/dout1",
+          "controls_0/regrD1"
+        ]
+      },
+      "regs_0_dout2": {
+        "ports": [
+          "regs_0/dout2",
+          "controls_0/regrD2"
+        ]
+      },
+      "regs_0_regsix": {
+        "ports": [
+          "regs_0/regsix",
+          "int_to_ascii_0/number"
+        ]
+      },
+      "rx_0_1": {
+        "ports": [
+          "TXD",
+          "uart_0/rx"
+        ]
+      },
+      "sw_0_1": {
+        "ports": [
+          "sw_0",
+          "PmodOLEDCtrl_0/RST"
+        ]
+      },
+      "uart_0_charRec": {
+        "ports": [
+          "uart_0/charRec",
+          "controls_0/charRec"
+        ]
+      },
+      "uart_0_newChar": {
+        "ports": [
+          "uart_0/newChar",
+          "controls_0/newChar"
+        ]
+      },
+      "uart_0_ready": {
+        "ports": [
+          "uart_0/ready",
+          "controls_0/ready"
+        ]
+      },
+      "uart_0_tx": {
+        "ports": [
+          "uart_0/tx",
+          "RXD"
+        ]
+      },
+      "vga_ctrl_0_hcount": {
+        "ports": [
+          "vga_ctrl_0/hcount",
+          "pixel_pusher_0/hcount"
+        ]
+      },
+      "vga_ctrl_0_hs": {
+        "ports": [
+          "vga_ctrl_0/hs",
+          "vga_hs"
+        ]
+      },
+      "vga_ctrl_0_vid": {
+        "ports": [
+          "vga_ctrl_0/vid",
+          "pixel_pusher_0/vid"
+        ]
+      },
+      "vga_ctrl_0_vs": {
+        "ports": [
+          "vga_ctrl_0/vs",
+          "pixel_pusher_0/VS",
+          "vga_vs"
+        ]
+      }
+    }
+  }
+}

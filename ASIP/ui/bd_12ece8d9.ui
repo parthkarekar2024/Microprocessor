@@ -1,0 +1,202 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"0.653119",
+   "Default View_TopLeft":"-1233,-669",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x 0 -y 580 -defaultsOSRD
+preplace port port-id_btn_0 -pg 1 -lvl 0 -x 0 -y 860 -defaultsOSRD
+preplace port port-id_vga_hs -pg 1 -lvl 7 -x 2140 -y 880 -defaultsOSRD
+preplace port port-id_vga_vs -pg 1 -lvl 7 -x 2140 -y 860 -defaultsOSRD
+preplace port port-id_TXD -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port port-id_RXD -pg 1 -lvl 7 -x 2140 -y 260 -defaultsOSRD
+preplace port port-id_CS -pg 1 -lvl 7 -x 2140 -y 320 -defaultsOSRD
+preplace port port-id_SDIN -pg 1 -lvl 7 -x 2140 -y 340 -defaultsOSRD
+preplace port port-id_SCLK -pg 1 -lvl 7 -x 2140 -y 360 -defaultsOSRD
+preplace port port-id_DC -pg 1 -lvl 7 -x 2140 -y 380 -defaultsOSRD
+preplace port port-id_RES -pg 1 -lvl 7 -x 2140 -y 400 -defaultsOSRD
+preplace port port-id_VBAT -pg 1 -lvl 7 -x 2140 -y 420 -defaultsOSRD
+preplace port port-id_VDD -pg 1 -lvl 7 -x 2140 -y 440 -defaultsOSRD
+preplace port port-id_sw_0 -pg 1 -lvl 0 -x 0 -y 540 -defaultsOSRD
+preplace port port-id_CTS -pg 1 -lvl 7 -x 2140 -y 20 -defaultsOSRD
+preplace port port-id_RTS -pg 1 -lvl 7 -x 2140 -y 40 -defaultsOSRD
+preplace portBus vga_r -pg 1 -lvl 7 -x 2140 -y 960 -defaultsOSRD
+preplace portBus vga_b -pg 1 -lvl 7 -x 2140 -y 980 -defaultsOSRD
+preplace portBus vga_g -pg 1 -lvl 7 -x 2140 -y 1000 -defaultsOSRD
+preplace inst clock_div_0 -pg 1 -lvl 1 -x 130 -y 740 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir en right -pinY en 0R
+preplace inst clock_div_baud_0 -pg 1 -lvl 1 -x 130 -y 640 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir en right -pinY en 0R
+preplace inst debouncer_0 -pg 1 -lvl 1 -x 130 -y 840 -swap {1 0 2} -defaultsOSRD -pinDir btn left -pinY btn 20L -pinDir clk left -pinY clk 0L -pinDir dbnc right -pinY dbnc 0R
+preplace inst regs_0 -pg 1 -lvl 2 -x 440 -y 340 -swap {0 1 2 4 5 6 7 10 11 8 9 3} -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir en left -pinY en 20L -pinDir rst left -pinY rst 160L -pinBusDir id1 right -pinBusY id1 20R -pinBusDir id2 right -pinBusY id2 40R -pinDir wr_en1 right -pinY wr_en1 60R -pinDir wr_en2 right -pinY wr_en2 80R -pinBusDir din1 right -pinBusY din1 140R -pinBusDir din2 right -pinBusY din2 160R -pinBusDir dout1 right -pinBusY dout1 100R -pinBusDir dout2 right -pinBusY dout2 120R -pinBusDir regsix right -pinBusY regsix 0R
+preplace inst framebuffer_0 -pg 1 -lvl 2 -x 440 -y 700 -swap {0 1 2 3 4 9 7 6 5 8} -defaultsOSRD -pinDir clk1 left -pinY clk1 0L -pinDir en1 left -pinY en1 20L -pinDir en2 left -pinY en2 40L -pinDir ld right -pinY ld 0R -pinBusDir addr1 right -pinBusY addr1 20R -pinBusDir addr2 right -pinBusY addr2 420R -pinDir wr_en1 right -pinY wr_en1 80R -pinBusDir din1 right -pinBusY din1 60R -pinBusDir dout1 right -pinBusY dout1 40R -pinBusDir dout2 right -pinBusY dout2 400R
+preplace inst vga_ctrl_0 -pg 1 -lvl 3 -x 900 -y 880 -swap {0 1 5 2 3 6 4} -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir en left -pinY en 20L -pinDir vid right -pinY vid 120R -pinDir hs right -pinY hs 0R -pinDir vs right -pinY vs 20R -pinBusDir hcount right -pinBusY hcount 140R -pinBusDir vcount right -pinBusY vcount 40R
+preplace inst pixel_pusher_0 -pg 1 -lvl 4 -x 1360 -y 960 -swap {0 4 1 5 3 2 6 7 8 9} -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir en left -pinY en 120L -pinDir VS left -pinY VS 20L -pinBusDir pixel left -pinBusY pixel 140L -pinBusDir hcount left -pinBusY hcount 60L -pinDir vid left -pinY vid 40L -pinBusDir R right -pinBusY R 0R -pinBusDir B right -pinBusY B 20R -pinBusDir G right -pinBusY G 40R -pinBusDir addr left -pinBusY addr 160L
+preplace inst instruction_ram_0 -pg 1 -lvl 4 -x 1360 -y 560 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinBusDir address left -pinBusY address 20L -pinBusDir data_out left -pinBusY data_out 40L
+preplace inst uart_0 -pg 1 -lvl 4 -x 1360 -y 300 -swap {0 2 4 3 1 5 6 7 8 9} -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir en left -pinY en 40L -pinDir send left -pinY send 80L -pinDir rx left -pinY rx 60L -pinDir rst left -pinY rst 20L -pinBusDir charSend left -pinBusY charSend 100L -pinDir ready left -pinY ready 120L -pinDir tx right -pinY tx 0R -pinDir newChar left -pinY newChar 140L -pinBusDir charRec left -pinBusY charRec 160L
+preplace inst ram_0 -pg 1 -lvl 4 -x 1360 -y 60 -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir wr left -pinY wr 20L -pinBusDir address left -pinBusY address 40L -pinBusDir data_in left -pinBusY data_in 60L -pinBusDir data_out left -pinBusY data_out 80L -pinDir ram_ready right -pinY ram_ready 0R
+preplace inst int_to_ascii_0 -pg 1 -lvl 5 -x 1670 -y 320 -defaultsOSRD -pinBusDir number left -pinBusY number 0L -pinBusDir tenthou right -pinBusY tenthou 40R -pinBusDir thou right -pinBusY thou 60R -pinBusDir hund right -pinBusY hund 80R -pinBusDir ten right -pinBusY ten 100R -pinBusDir one right -pinBusY one 120R
+preplace inst PmodOLEDCtrl_0 -pg 1 -lvl 6 -x 1980 -y 320 -swap {1 0 2 3 4 5 6 7 8 9 10 11 12 13} -defaultsOSRD -pinDir CLK left -pinY CLK 20L -pinDir RST left -pinY RST 0L -pinDir CS right -pinY CS 0R -pinDir SDIN right -pinY SDIN 20R -pinDir SCLK right -pinY SCLK 40R -pinDir DC right -pinY DC 60R -pinDir RES right -pinY RES 80R -pinDir VBAT right -pinY VBAT 100R -pinDir VDD right -pinY VDD 120R -pinBusDir tenthousand left -pinBusY tenthousand 40L -pinBusDir thousand left -pinBusY thousand 60L -pinBusDir hundred left -pinBusY hundred 80L -pinBusDir tens left -pinBusY tens 100L -pinBusDir ones left -pinBusY ones 120L
+preplace inst my_alu_0 -pg 1 -lvl 2 -x 440 -y 180 -swap {2 0 1 3 4 5} -defaultsOSRD -pinBusDir opcode right -pinBusY opcode 40R -pinBusDir A right -pinBusY A 0R -pinBusDir B right -pinBusY B 20R -pinBusDir S right -pinBusY S 60R -pinDir clk left -pinY clk 0L -pinDir en left -pinY en 60L
+preplace inst controls_0 -pg 1 -lvl 3 -x 900 -y 260 -swap {0 13 14 5 6 7 8 9 10 11 12 15 22 23 24 25 29 30 17 16 18 19 1 2 3 4 26 27 20 28 21} -defaultsOSRD -pinDir clk left -pinY clk 0L -pinDir en left -pinY en 340L -pinDir rst left -pinY rst 360L -pinBusDir rID1 left -pinBusY rID1 100L -pinBusDir rID2 left -pinBusY rID2 120L -pinDir wr_enR1 left -pinY wr_enR1 140L -pinDir wr_enR2 left -pinY wr_enR2 160L -pinBusDir regrD1 left -pinBusY regrD1 180L -pinBusDir regrD2 left -pinBusY regrD2 200L -pinBusDir regwD1 left -pinBusY regwD1 220L -pinBusDir regwD2 left -pinBusY regwD2 240L -pinDir fbRST left -pinY fbRST 440L -pinBusDir fbAddr1 left -pinBusY fbAddr1 460L -pinBusDir fbDin1 left -pinBusY fbDin1 480L -pinBusDir fbDout1 left -pinBusY fbDout1 500L -pinDir fbWr_en left -pinY fbWr_en 520L -pinBusDir irAddr right -pinBusY irAddr 320R -pinBusDir irWord right -pinBusY irWord 340R -pinBusDir dAddr right -pinBusY dAddr 20R -pinDir d_wr_en right -pinY d_wr_en 0R -pinBusDir dOut right -pinBusY dOut 40R -pinBusDir dIn right -pinBusY dIn 60R -pinBusDir aluA left -pinBusY aluA 20L -pinBusDir aluB left -pinBusY aluB 40L -pinBusDir aluOp left -pinBusY aluOp 60L -pinBusDir aluResult left -pinBusY aluResult 80L -pinDir ready right -pinY ready 160R -pinDir newChar right -pinY newChar 180R -pinDir send right -pinY send 120R -pinBusDir charRec right -pinBusY charRec 200R -pinBusDir charSend right -pinBusY charSend 140R
+preplace netloc PmodOLEDCtrl_0_CS 1 6 1 N 320
+preplace netloc PmodOLEDCtrl_0_DC 1 6 1 N 380
+preplace netloc PmodOLEDCtrl_0_RES 1 6 1 N 400
+preplace netloc PmodOLEDCtrl_0_SCLK 1 6 1 N 360
+preplace netloc PmodOLEDCtrl_0_SDIN 1 6 1 N 340
+preplace netloc PmodOLEDCtrl_0_VBAT 1 6 1 N 420
+preplace netloc PmodOLEDCtrl_0_VDD 1 6 1 N 440
+preplace netloc btn_0_1 1 0 1 N 860
+preplace netloc clk_0_1 1 0 6 30 580 270 120 620 100 1190 240 N 240 1800
+preplace netloc clock_div_0_en 1 1 3 330 640 580 1080 N
+preplace netloc clock_div_baud_0_en 1 1 3 310 600 680 140 1060
+preplace netloc controls_0_aluA 1 2 1 700J 180n
+preplace netloc controls_0_aluB 1 2 1 740J 200n
+preplace netloc controls_0_aluOp 1 2 1 640J 220n
+preplace netloc controls_0_charSend 1 3 1 N 400
+preplace netloc controls_0_dAddr 1 3 1 1210 100n
+preplace netloc controls_0_dOut 1 3 1 1140 120n
+preplace netloc controls_0_d_wr_en 1 3 1 1080 80n
+preplace netloc controls_0_fbAddr1 1 2 1 NJ 720
+preplace netloc controls_0_fbDout1 1 2 1 NJ 760
+preplace netloc controls_0_fbRST 1 2 1 NJ 700
+preplace netloc controls_0_fbWr_en 1 2 1 NJ 780
+preplace netloc controls_0_irAddr 1 3 1 N 580
+preplace netloc controls_0_rID1 1 2 1 NJ 360
+preplace netloc controls_0_rID2 1 2 1 NJ 380
+preplace netloc controls_0_regwD1 1 2 1 NJ 480
+preplace netloc controls_0_regwD2 1 2 1 NJ 500
+preplace netloc controls_0_send 1 3 1 N 380
+preplace netloc controls_0_wr_enR1 1 2 1 NJ 400
+preplace netloc controls_0_wr_enR2 1 2 1 NJ 420
+preplace netloc debouncer_0_dbnc 1 1 3 250 620 660 120 1120
+preplace netloc framebuffer_0_dout1 1 2 1 N 740
+preplace netloc framebuffer_0_dout2 1 2 2 NJ 1100 N
+preplace netloc instruction_ram_0_data_out 1 3 1 NJ 600
+preplace netloc int_to_ascii_0_hund 1 5 1 N 400
+preplace netloc int_to_ascii_0_one 1 5 1 N 440
+preplace netloc int_to_ascii_0_ten 1 5 1 N 420
+preplace netloc int_to_ascii_0_tenthou 1 5 1 N 360
+preplace netloc int_to_ascii_0_thou 1 5 1 N 380
+preplace netloc my_alu_0_S 1 2 1 570 240n
+preplace netloc pixel_pusher_0_B 1 4 3 NJ 980 NJ 980 N
+preplace netloc pixel_pusher_0_G 1 4 3 NJ 1000 NJ 1000 N
+preplace netloc pixel_pusher_0_R 1 4 3 NJ 960 NJ 960 N
+preplace netloc pixel_pusher_0_addr 1 2 2 NJ 1120 NJ
+preplace netloc ram_0_data_out 1 3 1 1100J 140n
+preplace netloc regs_0_dout1 1 2 1 N 440
+preplace netloc regs_0_dout2 1 2 1 N 460
+preplace netloc regs_0_regsix 1 2 3 550J 160 1230J 220 1510
+preplace netloc rx_0_1 1 0 4 NJ 560 NJ 560 720J 180 1040J
+preplace netloc sw_0_1 1 0 6 NJ 540 290J 580 760J 200 NJ 200 NJ 200 1820
+preplace netloc uart_0_charRec 1 3 1 NJ 460
+preplace netloc uart_0_newChar 1 3 1 NJ 440
+preplace netloc uart_0_ready 1 3 1 NJ 420
+preplace netloc uart_0_tx 1 4 3 1490J 260 NJ 260 N
+preplace netloc vga_ctrl_0_hcount 1 3 1 N 1020
+preplace netloc vga_ctrl_0_hs 1 3 4 NJ 880 NJ 880 NJ 880 N
+preplace netloc vga_ctrl_0_vid 1 3 1 N 1000
+preplace netloc vga_ctrl_0_vs 1 3 4 1070 900 1490 860 N 860 N
+levelinfo -pg 1 0 130 440 900 1360 1670 1980 2140
+pagesize -pg 1 -db -bbox -sgen -90 0 2270 1180
+",
+   "No Loops_ScaleFactor":"0.450724",
+   "No Loops_TopLeft":"-816,-144",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -1140 -y 10 -defaultsOSRD
+preplace port port-id_btn_0 -pg 1 -lvl 0 -x -1140 -y 210 -defaultsOSRD
+preplace port port-id_vga_hs -pg 1 -lvl 7 -x 1450 -y 380 -defaultsOSRD
+preplace port port-id_vga_vs -pg 1 -lvl 7 -x 1450 -y 260 -defaultsOSRD
+preplace port port-id_TXD -pg 1 -lvl 0 -x -1140 -y -60 -defaultsOSRD
+preplace port port-id_RXD -pg 1 -lvl 7 -x 1450 -y -10 -defaultsOSRD
+preplace port port-id_CS -pg 1 -lvl 7 -x 1450 -y 50 -defaultsOSRD
+preplace port port-id_SDIN -pg 1 -lvl 7 -x 1450 -y 70 -defaultsOSRD
+preplace port port-id_SCLK -pg 1 -lvl 7 -x 1450 -y 90 -defaultsOSRD
+preplace port port-id_DC -pg 1 -lvl 7 -x 1450 -y 110 -defaultsOSRD
+preplace port port-id_RES -pg 1 -lvl 7 -x 1450 -y 130 -defaultsOSRD
+preplace port port-id_VBAT -pg 1 -lvl 7 -x 1450 -y 150 -defaultsOSRD
+preplace port port-id_VDD -pg 1 -lvl 7 -x 1450 -y 170 -defaultsOSRD
+preplace port port-id_sw_0 -pg 1 -lvl 0 -x -1140 -y -200 -defaultsOSRD
+preplace port port-id_CTS -pg 1 -lvl 7 -x 1450 -y -610 -defaultsOSRD
+preplace port port-id_RTS -pg 1 -lvl 7 -x 1450 -y -510 -defaultsOSRD
+preplace portBus vga_r -pg 1 -lvl 7 -x 1450 -y 460 -defaultsOSRD
+preplace portBus vga_b -pg 1 -lvl 7 -x 1450 -y 480 -defaultsOSRD
+preplace portBus vga_g -pg 1 -lvl 7 -x 1450 -y 500 -defaultsOSRD
+preplace inst clock_div_0 -pg 1 -lvl 1 -x -970 -y 110 -defaultsOSRD
+preplace inst clock_div_baud_0 -pg 1 -lvl 1 -x -970 -y 10 -defaultsOSRD
+preplace inst controls_0 -pg 1 -lvl 3 -x -70 -y 70 -defaultsOSRD
+preplace inst debouncer_0 -pg 1 -lvl 1 -x -970 -y 220 -defaultsOSRD
+preplace inst my_alu_0 -pg 1 -lvl 2 -x -530 -y -340 -defaultsOSRD
+preplace inst regs_0 -pg 1 -lvl 2 -x -530 -y -120 -defaultsOSRD
+preplace inst framebuffer_0 -pg 1 -lvl 2 -x -530 -y 230 -defaultsOSRD
+preplace inst vga_ctrl_0 -pg 1 -lvl 3 -x -70 -y 390 -defaultsOSRD
+preplace inst pixel_pusher_0 -pg 1 -lvl 4 -x 500 -y 490 -defaultsOSRD
+preplace inst instruction_ram_0 -pg 1 -lvl 4 -x 500 -y 220 -defaultsOSRD
+preplace inst uart_0 -pg 1 -lvl 4 -x 500 -y 60 -defaultsOSRD
+preplace inst ram_0 -pg 1 -lvl 4 -x 500 -y -220 -defaultsOSRD
+preplace inst int_to_ascii_0 -pg 1 -lvl 5 -x 850 -y 90 -defaultsOSRD
+preplace inst PmodOLEDCtrl_0 -pg 1 -lvl 6 -x 1200 -y 110 -defaultsOSRD
+preplace netloc PmodOLEDCtrl_0_CS 1 6 1 N 50
+preplace netloc PmodOLEDCtrl_0_DC 1 6 1 N 110
+preplace netloc PmodOLEDCtrl_0_RES 1 6 1 N 130
+preplace netloc PmodOLEDCtrl_0_SCLK 1 6 1 N 90
+preplace netloc PmodOLEDCtrl_0_SDIN 1 6 1 N 70
+preplace netloc PmodOLEDCtrl_0_VBAT 1 6 1 N 150
+preplace netloc PmodOLEDCtrl_0_VDD 1 6 1 N 170
+preplace netloc btn_0_1 1 0 1 N 210
+preplace netloc clk_0_1 1 0 6 -1120 -50 -840 -440 -300 -290 310 -80 N -80 1040
+preplace netloc clock_div_0_en 1 1 3 -820 100 -370 490 310
+preplace netloc clock_div_baud_0_en 1 1 3 -830 60 -330 -210 250
+preplace netloc controls_0_aluA 1 1 3 -780 -540 NJ -540 200
+preplace netloc controls_0_aluB 1 1 3 -770 -530 NJ -530 190
+preplace netloc controls_0_aluOp 1 1 3 -750 -520 NJ -520 180
+preplace netloc controls_0_charSend 1 3 1 340 110n
+preplace netloc controls_0_dAddr 1 3 1 260 -210n
+preplace netloc controls_0_dOut 1 3 1 290 -190n
+preplace netloc controls_0_d_wr_en 1 3 1 240 -230n
+preplace netloc controls_0_fbAddr1 1 1 3 -800 -510 NJ -510 170
+preplace netloc controls_0_fbDout1 1 1 3 -810 -500 NJ -500 160
+preplace netloc controls_0_fbRST 1 1 3 -790 -490 NJ -490 150
+preplace netloc controls_0_fbWr_en 1 1 3 -700 80 -370J -280 140
+preplace netloc controls_0_irAddr 1 3 1 210 90n
+preplace netloc controls_0_rID1 1 1 3 -730 40 -400J -270 90
+preplace netloc controls_0_rID2 1 1 3 -720 50 -380J -260 80
+preplace netloc controls_0_regwD1 1 1 3 -760 -480 NJ -480 130
+preplace netloc controls_0_regwD2 1 1 3 -740 -450 NJ -450 120
+preplace netloc controls_0_send 1 3 1 170 50n
+preplace netloc controls_0_wr_enR1 1 1 3 -710 -470 NJ -470 110
+preplace netloc controls_0_wr_enR2 1 1 3 -700 -460 NJ -460 100
+preplace netloc debouncer_0_dbnc 1 1 3 -870 70 -340 -250 220
+preplace netloc framebuffer_0_dout1 1 2 1 -290 60n
+preplace netloc framebuffer_0_dout2 1 2 2 -400J 500 N
+preplace netloc instruction_ram_0_data_out 1 2 3 -280 -240 340J -120 670
+preplace netloc int_to_ascii_0_hund 1 5 1 1010 90n
+preplace netloc int_to_ascii_0_one 1 5 1 990 130n
+preplace netloc int_to_ascii_0_ten 1 5 1 1000 110n
+preplace netloc int_to_ascii_0_tenthou 1 5 1 1030 50n
+preplace netloc int_to_ascii_0_thou 1 5 1 1020 70n
+preplace netloc my_alu_0_S 1 2 1 -310 -340n
+preplace netloc pixel_pusher_0_B 1 4 3 NJ 480 NJ 480 N
+preplace netloc pixel_pusher_0_G 1 4 3 NJ 500 NJ 500 N
+preplace netloc pixel_pusher_0_R 1 4 3 NJ 460 NJ 460 N
+preplace netloc pixel_pusher_0_addr 1 1 4 -710 610 NJ 610 NJ 610 650
+preplace netloc ram_0_data_out 1 2 3 -270 -230 230J -130 690
+preplace netloc regs_0_dout1 1 2 1 -290 -140n
+preplace netloc regs_0_dout2 1 2 1 -350 -120n
+preplace netloc regs_0_regsix 1 2 3 -390J -200 320J -100 690
+preplace netloc rx_0_1 1 0 4 NJ -60 -860J 20 -360J -190 280J
+preplace netloc sw_0_1 1 0 6 NJ -200 -850J 30 -320J -180 300J -110 NJ -110 1050
+preplace netloc uart_0_charRec 1 2 3 -250 600 NJ 600 660
+preplace netloc uart_0_newChar 1 2 3 -250 -170 270J -70 650
+preplace netloc uart_0_ready 1 2 3 -260 -220 330J -90 660
+preplace netloc uart_0_tx 1 4 3 680J -10 NJ -10 N
+preplace netloc vga_ctrl_0_hcount 1 3 1 80 410n
+preplace netloc vga_ctrl_0_hs 1 3 4 NJ 370 NJ 370 NJ 370 1330
+preplace netloc vga_ctrl_0_vid 1 3 1 150 350n
+preplace netloc vga_ctrl_0_vs 1 3 4 340 380 680 260 N 260 N
+levelinfo -pg 1 -1140 -970 -530 -70 500 850 1200 1450
+pagesize -pg 1 -db -bbox -sgen -1230 -690 1570 860
+"
+}
+0
